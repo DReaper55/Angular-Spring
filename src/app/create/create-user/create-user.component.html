@@ -1,0 +1,48 @@
+<mat-card>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="userForm">
+    
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter Username</mat-label>
+            <input type="text" formControlName="username" matInput placeholder="">
+            <mat-error *ngIf="!username.valid"> "Input a username" </mat-error>
+          </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter Email</mat-label>
+            <input type="email" formControlName="email" matInput placeholder="">
+            <mat-error *ngIf="!email.valid"> "Invalid Email" </mat-error>
+          </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter Password</mat-label>
+            <input type="password" formControlName="password" matInput placeholder="">
+            <mat-error *ngIf="password.invalid && password.errors.shortPWord"> "password should be longer than 6" </mat-error>
+          </mat-form-field>
+    </div>
+
+    <button [disabled]="userForm.invalid" mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
+</mat-card>
+
+
+<!-- <div class="form-group" id="container">
+    <label for="username">Username</label>
+    <input type="text" [(ngModel)]="user.username" name="username" id="username" class="form-control" required>
+</div>
+
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" [(ngModel)]="user.email" name="email" id="email" class="form-control" required>
+</div>
+
+<div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" [(ngModel)]="user.password" name="password" id="password" class="form-control" required>
+</div> -->

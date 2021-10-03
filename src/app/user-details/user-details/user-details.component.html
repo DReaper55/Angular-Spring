@@ -1,0 +1,47 @@
+<!-- <div>
+    <tr>
+        <td> Id: </td>
+        <td> {{user.id}} </td>
+    </tr>
+
+    <tr>
+        <td> Username: </td>
+        <td> {{user.username}} </td>
+    </tr>
+
+    <tr>
+        <td> Email: </td>
+        <td> {{user.email}} </td>
+    </tr>
+
+    <tr>
+        <td> Password: </td>
+        <td> {{user.password}} </td>
+    </tr>
+</div> -->
+
+<mat-card>
+    <mat-card-title> Details </mat-card-title>
+
+    <mat-card-content>
+        <mat-form-field class="example-form-field">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" [(ngModel)]="user.username">
+        </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+        <mat-form-field class="example-form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" [(ngModel)]="user.email">
+        </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+        <mat-form-field class="example-form-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="text" [(ngModel)]="user.password">
+        </mat-form-field>
+    </mat-card-content>
+
+</mat-card>
